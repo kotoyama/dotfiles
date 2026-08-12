@@ -4,5 +4,7 @@ brew "git"
 brew "ripgrep"
 brew "zsh"
 brew "anomalyco/tap/opencode", trusted: true
+cask "font-martian-mono"
+cask "font-martian-mono-nerd-font"
 cask "ghostty"
 cask "visual-studio-code"
