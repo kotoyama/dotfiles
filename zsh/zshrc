@@ -4,6 +4,9 @@ export HOMEBREW_NO_ANALYTICS=1
 
 ZSH_THEME="robbyrussell"
 
-plugins=(git zsh-autosuggestions zsh-syntax-highlighting)
+plugins=(git)
+while read -r repo; do
+  [[ -n "$repo" ]] && plugins+=("${repo:t}")
+done < "$HOME/dotfiles/zsh/plugins.txt"
 
 source $ZSH/oh-my-zsh.sh
