@@ -23,6 +23,7 @@ link() {
     "git/gitconfig:$HOME/.gitconfig"
     "git/gitignore_global:$HOME/.gitignore_global"
     "zsh/zshrc:$HOME/.zshrc"
+    "zsh/zprofile:$HOME/.zprofile"
     "bootstrap.sh:$HOME/.local/bin/dotfiles"
   )
   for entry in "${links[@]}"; do
