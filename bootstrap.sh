@@ -55,7 +55,10 @@ sync() {
   )
   for cmd in "${snapshots[@]}"; do
     echo "  📸 $cmd"
-    bash -c "$cmd"
+    if ! bash -c "$cmd"; then
+      echo "❌ Error: snapshot failed: $cmd" >&2
+      exit 1
+    fi
   done
   echo "✅ Done."
 }
