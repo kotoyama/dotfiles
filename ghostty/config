@@ -1,0 +1,13 @@
+font-family = "MartianMono Nerd Font Mono"
+font-size = 20
+
+adjust-cell-height = 20%
+cursor-style = block
+mouse-scroll-multiplier = 2
+
+window-colorspace = "display-p3"
+window-padding-balance = true
+window-save-state = always
+
+background-opacity = 0.8
+background-blur = 90

@@ -1,0 +1,39 @@
+{
+  "$schema": "vscode://schemas/settings/user",
+  // editor
+  "editor.cursorBlinking": "expand",
+  "editor.detectIndentation": false,
+  "editor.fontFamily": "Martian Mono",
+  "editor.fontLigatures": true,
+  "editor.fontSize": 12.5,
+  "editor.formatOnSave": true,
+  "editor.lineHeight": 20,
+  "editor.linkedEditing": true,
+  "editor.minimap.enabled": false,
+  "editor.renderWhitespace": "all",
+  "editor.suggestSelection": "first",
+  "editor.tabSize": 2,
+  //explorer
+  "explorer.confirmDelete": false,
+  "explorer.confirmDragAndDrop": false,
+  "explorer.confirmPasteNative": false,
+  // files
+  "files.insertFinalNewline": true,
+  // diff editor
+  "diffEditor.ignoreTrimWhitespace": false,
+  // workbench
+  "chat.titleBar.openInAgentsWindow.enabled": false,
+  "window.commandCenter": false,
+  "window.customTitleBarVisibility": "never",
+  "window.nativeTabs": true,
+  "workbench.activityBar.location": "top",
+  "workbench.colorTheme": "GitHub Dark Default",
+  "workbench.fontAliasing": "auto",
+  "workbench.layoutControl.enabled": false,
+  // disable creepiness
+  "telemetry.telemetryLevel": "off",
+  // git
+  "git.autofetch": true,
+  // dev containers
+  "remote.autoForwardPortsSource": "hybrid",
+}

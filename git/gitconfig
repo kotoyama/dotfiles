@@ -1,0 +1,12 @@
+[user]
+	name = kotoyama
+	email = kotoyamadev@pm.me
+
+[core]
+	excludesfile = ~/.gitignore_global
+
+[alias]
+	undo = reset --soft HEAD~1
+
+[submodule]
+	recurse = true
