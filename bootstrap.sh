@@ -100,6 +100,10 @@ setup() {
       [[ -n "$ext" ]] && code --install-extension "$ext"
     done < "$DOTFILES_DIR/vscode/extensions.txt"
   fi
+
+  # macOS settings
+  "$DOTFILES_DIR/macos/defaults"
+
   echo "✅ Done."
 }
 
