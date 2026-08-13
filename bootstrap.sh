@@ -18,6 +18,7 @@ link() {
   local links=(
     "ghostty/config:$HOME/.config/ghostty/config"
     "opencode/opencode.jsonc:$HOME/.config/opencode/opencode.jsonc"
+    "opencode/tui.json:$HOME/.config/opencode/tui.json"
     "opencode/AGENTS.md:$HOME/.config/opencode/AGENTS.md"
     "vscode/settings.json:$HOME/Library/Application Support/Code/User/settings.json"
     "git/gitconfig:$HOME/.gitconfig"
