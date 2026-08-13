@@ -22,6 +22,7 @@ link() {
     "vscode/settings.json:$HOME/Library/Application Support/Code/User/settings.json"
     "git/gitconfig:$HOME/.gitconfig"
     "git/gitignore_global:$HOME/.gitignore_global"
+    "ssh/config:$HOME/.ssh/config"
     "zsh/zshrc:$HOME/.zshrc"
     "zsh/zprofile:$HOME/.zprofile"
     "bootstrap.sh:$HOME/.local/bin/dotfiles"

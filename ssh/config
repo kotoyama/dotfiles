@@ -1,0 +1,11 @@
+Host github.com
+  IdentityFile ~/.ssh/github
+
+Host rpi4.local
+  IdentityFile ~/.ssh/rpi4
+
+Host *
+  AddKeysToAgent yes
+  IdentitiesOnly yes
+  UseKeychain yes
+  PreferredAuthentications publickey
