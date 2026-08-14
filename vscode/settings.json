@@ -26,6 +26,7 @@
   "window.commandCenter": false,
   "window.customTitleBarVisibility": "never",
   "window.nativeTabs": true,
+  "window.restoreWindows": "none",
   "workbench.activityBar.location": "top",
   "workbench.colorTheme": "GitHub Dark Default",
   "workbench.fontAliasing": "auto",
