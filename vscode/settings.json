@@ -5,7 +5,7 @@
   "editor.detectIndentation": false,
   "editor.fontFamily": "Martian Mono",
   "editor.fontLigatures": true,
-  "editor.fontSize": 12.5,
+  "editor.fontSize": 14,
   "editor.formatOnSave": true,
   "editor.lineHeight": 20,
   "editor.linkedEditing": true,
@@ -21,12 +21,15 @@
   "files.insertFinalNewline": true,
   // diff editor
   "diffEditor.ignoreTrimWhitespace": false,
+  // terminal
+  "terminal.integrated.fontSize": 14,
   // workbench
   "chat.titleBar.openInAgentsWindow.enabled": false,
   "window.commandCenter": false,
   "window.customTitleBarVisibility": "never",
   "window.nativeTabs": true,
   "window.restoreWindows": "none",
+  "window.zoomLevel": 1,
   "workbench.activityBar.location": "top",
   "workbench.colorTheme": "GitHub Dark Default",
   "workbench.fontAliasing": "auto",
