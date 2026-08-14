@@ -4,6 +4,7 @@ set -euo pipefail
 echo "🔧 Applying macOS defaults..."
 
 # Dock
+defaults write com.apple.dock autohide -bool true
 defaults write com.apple.dock show-recents -bool false
 defaults write com.apple.dock magnification -bool true
 defaults write com.apple.dock largesize -int 85
