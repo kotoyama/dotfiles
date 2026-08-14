@@ -13,3 +13,6 @@ window-save-state = always
 
 background-opacity = 0.8
 background-blur = 90
+
+keybind = cmd+backslash=new_split:right
+keybind = cmd+shift+backslash=new_split:down 
