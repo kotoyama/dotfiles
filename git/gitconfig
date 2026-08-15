@@ -3,7 +3,7 @@
 	email = kotoyamadev@pm.me
 
 [core]
-	excludesfile = ~/.gitignore_global
+	excludesfile = ~/.gitignore
 
 [alias]
 	undo = reset --soft HEAD~1
