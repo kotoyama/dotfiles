@@ -21,6 +21,8 @@ link() {
     "opencode/tui.json:$HOME/.config/opencode/tui.json"
     "opencode/AGENTS.md:$HOME/.config/opencode/AGENTS.md"
     "vscode/settings.jsonc:$HOME/Library/Application Support/Code/User/settings.json"
+    "zed/settings.json:$HOME/.config/zed/settings.json"
+    "zed/themes/*.json:$HOME/.config/zed/themes/"
     "git/gitconfig:$HOME/.gitconfig"
     "git/gitignore_global:$HOME/.gitignore_global"
     "ssh/config:$HOME/.ssh/config"
@@ -38,6 +40,19 @@ link() {
     if [ -z "$dst" ]; then
       echo "❌ Error: missing destination in: '$entry'" >&2
       exit 1
+    fi
+    if [[ "$src" == *"*"* ]]; then
+      mkdir -p "$dst"
+      local glob="$DOTFILES_DIR/$src"
+      local base="${dst%/}"
+      for f in $glob; do
+        [ -e "$f" ] || continue
+        local target="$base/$(basename "$f")"
+        backup_if_needed "$target"
+        ln -sfn "$f" "$target"
+        echo "  ✓ $target -> $f"
+      done
+      continue
     fi
     if [ ! -e "$DOTFILES_DIR/$src" ]; then
       echo "❌ Error: source not found: $DOTFILES_DIR/$src" >&2

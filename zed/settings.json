@@ -1,0 +1,71 @@
+{
+  // editor
+  "ui_font_size": 20,
+  "buffer_font_size": 16,
+  "buffer_font_family": "Martian Mono",
+  "tab_size": 2,
+  "format_on_save": "on",
+  "base_keymap": "VSCode",
+  "show_whitespaces": "all",
+  // terminal
+  "terminal": {
+    "font_size": 16,
+  },
+  // theme
+  "theme": {
+    "mode": "dark",
+    "light": "Catppuccin Latte",
+    "dark": "Catppuccin Mocha Custom (Blur)",
+  },
+  "icon_theme": {
+    "mode": "dark",
+    "light": "Catppuccin Mocha",
+    "dark": "Catppuccin Mocha",
+  },
+  // workbench
+  "project_panel": {
+    "dock": "left",
+  },
+  "global_lsp_settings": {
+    "button": false,
+  },
+  "collaboration_panel": {
+    "button": false,
+  },
+  "outline_panel": {
+    "button": false,
+  },
+  "tabs": {
+    "file_icons": true,
+  },
+  "tab_bar": {
+    "show_nav_history_buttons": false,
+    "show_tab_bar_buttons": false,
+  },
+  "title_bar": {
+    "show_sign_in": false,
+  },
+  "toolbar": {
+    "quick_actions": false,
+    "breadcrumbs": false,
+  },
+  "restore_on_startup": "launchpad",
+  "use_system_window_tabs": true,
+  // extensions
+  "auto_install_extensions": {
+    "html": true,
+    "catppuccin-icons": true,
+  },
+  // ai
+  "agent": {
+    "enabled": false,
+  },
+  "edit_predictions": {
+    "provider": "none",
+  },
+  // disable creepiness
+  "telemetry": {
+    "diagnostics": false,
+    "metrics": false,
+  },
+}
