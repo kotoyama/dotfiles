@@ -20,7 +20,7 @@ link() {
     "opencode/opencode.jsonc:$HOME/.config/opencode/opencode.jsonc"
     "opencode/tui.json:$HOME/.config/opencode/tui.json"
     "opencode/AGENTS.md:$HOME/.config/opencode/AGENTS.md"
-    "vscode/settings.json:$HOME/Library/Application Support/Code/User/settings.json"
+    "vscode/settings.jsonc:$HOME/Library/Application Support/Code/User/settings.json"
     "git/gitconfig:$HOME/.gitconfig"
     "git/gitignore_global:$HOME/.gitignore_global"
     "ssh/config:$HOME/.ssh/config"
