@@ -3,6 +3,7 @@
 	email = kotoyamadev@pm.me
 
 [core]
+	attributesfile = ~/.gitattributes
 	excludesfile = ~/.gitignore
 
 [alias]

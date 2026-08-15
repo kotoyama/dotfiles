@@ -25,6 +25,7 @@ link() {
     "zed/themes/*.json:$HOME/.config/zed/themes/"
     "git/gitconfig:$HOME/.gitconfig"
     "git/gitignore:$HOME/.gitignore"
+    "git/gitattributes:$HOME/.gitattributes"
     "ssh/config:$HOME/.ssh/config"
     "zsh/zshrc:$HOME/.zshrc"
     "zsh/zprofile:$HOME/.zprofile"
