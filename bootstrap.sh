@@ -86,6 +86,17 @@ setup() {
   # symlinks
   link
 
+  # projects
+  echo "🔧 Setting up projects..."
+  PROJECTS_DIR="$HOME/projects"
+  mkdir -p "$PROJECTS_DIR/personal" "$PROJECTS_DIR/work"
+  if [ ! -e "$HOME/Desktop/projects" ] && [ ! -L "$HOME/Desktop/projects" ]; then
+    ln -s "$PROJECTS_DIR" "$HOME/Desktop/projects"
+    echo "  ✓ $HOME/Desktop/projects -> $PROJECTS_DIR"
+  else
+    echo "  ℹ️ $HOME/Desktop/projects already exists"
+  fi
+
   # zsh
   echo "🔧 Setting up zsh..."
   if [ ! -d "$HOME/.oh-my-zsh" ]; then
