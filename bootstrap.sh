@@ -64,7 +64,7 @@ link() {
     ln -sfn "$DOTFILES_DIR/$src" "$dst"
     echo "  ✓ $dst -> $DOTFILES_DIR/$src"
   done
-  echo "✅ Done."
+  echo "✅ Symlinks ready."
 }
 
 sync() {
@@ -79,7 +79,7 @@ sync() {
       exit 1
     fi
   done
-  echo "✅ Done."
+  echo "✅ Snapshots saved."
 }
 
 setup() {
@@ -96,6 +96,7 @@ setup() {
   else
     echo "  ℹ️ $HOME/Desktop/projects already exists"
   fi
+  echo "✅ Projects ready."
 
   # zsh
   echo "🔧 Setting up zsh..."
@@ -103,15 +104,17 @@ setup() {
     git clone --depth 1 https://github.com/ohmyzsh/ohmyzsh.git "$HOME/.oh-my-zsh"
     echo "  ✓ oh-my-zsh"
   fi
-  mkdir -p "$HOME/.oh-my-zsh/custom/plugins"
+  ZSH_PLUGINS_DIR="$HOME/.oh-my-zsh/custom/plugins"
+  mkdir -p "$ZSH_PLUGINS_DIR"
   while read -r repo; do
     [[ -z "$repo" ]] && continue
     local name="${repo##*/}"
-    if [ ! -d "$HOME/.oh-my-zsh/custom/plugins/$name" ]; then
-      git clone --depth 1 "https://github.com/$repo" "$HOME/.oh-my-zsh/custom/plugins/$name"
+    if [ ! -d "$ZSH_PLUGINS_DIR/$name" ]; then
+      git clone --depth 1 "https://github.com/$repo" "$ZSH_PLUGINS_DIR/$name"
       echo "  ✓ $name"
     fi
   done < "$DOTFILES_DIR/zsh/plugins.txt"
+  echo "✅ zsh ready."
 
   # Homebrew
   if ! command -v brew >/dev/null; then
@@ -120,6 +123,7 @@ setup() {
   fi
   echo "📦 Installing packages from Brewfile..."
   brew bundle --file="$DOTFILES_DIR/Brewfile"
+  echo "✅ Homebrew ready."
 
   # VS Code extensions
   if command -v code >/dev/null; then
@@ -128,11 +132,12 @@ setup() {
       [[ -n "$ext" ]] && code --install-extension "$ext"
     done < "$DOTFILES_DIR/vscode/extensions.txt"
   fi
+  echo "✅ VS Code extensions ready."
 
   # macOS settings
   "$DOTFILES_DIR/macos/defaults"
 
-  echo "✅ Done."
+  echo "✅ Setup complete."
 }
 
 help() {
