@@ -54,6 +54,7 @@
   // extensions
   "auto_install_extensions": {
     "html": true,
+    "catppuccin": true,
     "catppuccin-icons": true,
   },
   // ai
