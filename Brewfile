@@ -7,5 +7,6 @@ brew "anomalyco/tap/opencode", trusted: true
 cask "font-martian-mono"
 cask "font-martian-mono-nerd-font"
 cask "ghostty"
+cask "orbstack"
 cask "visual-studio-code"
 cask "zed"
