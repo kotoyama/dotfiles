@@ -4,18 +4,18 @@
   "default_agent": "plan",
   "agent": {
     "plan": {
-      "temperature": 0.1
+      "temperature": 0.1,
     },
     "build": {
-      "temperature": 0.3
-    }
+      "temperature": 0.3,
+    },
   },
   "mcp": {
     "context7": {
       "type": "remote",
       "url": "https://mcp.context7.com/mcp",
-      "enabled": true
-    }
+      "enabled": true,
+    },
   },
   "permission": {
     "bash": {
@@ -34,10 +34,13 @@
       "git status *": "allow",
       "git commit *": "deny",
       "git push *": "deny",
-      "git reset *": "deny"
+      "git reset *": "deny",
     },
-    "external_directory": "deny"
+    "external_directory": {
+      "*": "deny",
+      "~/.agents/skills/**": "allow",
+    },
   },
   "autoupdate": true,
-  "lsp": true
+  "lsp": true,
 }
