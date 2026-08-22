@@ -7,9 +7,24 @@
   "format_on_save": "on",
   "base_keymap": "VSCode",
   "show_whitespaces": "all",
+  "file_types": {
+    "Git Attributes": ["**/{git,.git,.git/info}/attributes"],
+    "Git Config": [
+      "**/*gitconfig",
+      "**/{git,.git,.git/modules,.git/modules/*}/config",
+    ],
+    "Git Ignore": [
+      "**/*gitignore",
+      "**/{git,.git}/ignore",
+      "**/.git/info/exclude",
+    ],
+  },
   // terminal
   "terminal": {
     "font_size": 16,
+    "env": {
+      "GIT_EDITOR": "zed --wait",
+    },
   },
   // theme
   "theme": {
@@ -54,6 +69,7 @@
   // extensions
   "auto_install_extensions": {
     "html": true,
+    "git-firefly": true,
     "catppuccin": true,
     "catppuccin-icons": true,
   },
