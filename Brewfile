@@ -1,10 +1,12 @@
 tap "anomalyco/tap"
+tap "aovestdipaperino/tap"
 brew "fd"
 brew "git"
 brew "ripgrep"
 brew "zsh"
 brew "starship"
 brew "anomalyco/tap/opencode", trusted: true
+brew "aovestdipaperino/tap/tokensave", trusted: true
 cask "font-martian-mono"
 cask "font-martian-mono-nerd-font"
 cask "ghostty"

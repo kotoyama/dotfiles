@@ -17,7 +17,7 @@ link() {
   echo "🔧 Setting up symlinks..."
   local links=(
     "ghostty/config:$HOME/.config/ghostty/config"
-    "opencode/opencode.jsonc:$HOME/.config/opencode/opencode.jsonc"
+    "opencode/opencode.json:$HOME/.config/opencode/opencode.json"
     "opencode/tui.json:$HOME/.config/opencode/tui.json"
     "opencode/AGENTS.md:$HOME/.config/opencode/AGENTS.md"
     "vscode/settings.jsonc:$HOME/Library/Application Support/Code/User/settings.json"
@@ -125,6 +125,13 @@ setup() {
   echo "📦 Installing packages from Brewfile..."
   brew bundle --file="$DOTFILES_DIR/Brewfile"
   echo "✅ Homebrew ready."
+
+  # tokensave
+  if command -v tokensave >/dev/null; then
+    echo "🧠 Setting up tokensave..."
+    tokensave install --agent opencode --git-hook yes
+    echo "✅ tokensave ready."
+  fi
 
   # VS Code extensions
   if command -v code >/dev/null; then

@@ -5,6 +5,7 @@
 [core]
 	attributesfile = ~/.gitattributes
 	excludesfile = ~/.gitignore
+	hooksPath = ~/.config/git/hooks
 
 [alias]
 	undo = reset --soft HEAD~1
