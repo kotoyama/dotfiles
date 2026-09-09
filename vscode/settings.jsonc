@@ -23,6 +23,7 @@
   "diffEditor.ignoreTrimWhitespace": false,
   // terminal
   "terminal.integrated.fontSize": 14,
+  "terminal.integrated.fontFamily": "MartianMono Nerd Font Mono",
   // workbench
   "chat.titleBar.openInAgentsWindow.enabled": false,
   "window.commandCenter": false,
