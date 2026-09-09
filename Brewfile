@@ -3,6 +3,7 @@ brew "fd"
 brew "git"
 brew "ripgrep"
 brew "zsh"
+brew "starship"
 brew "anomalyco/tap/opencode", trusted: true
 cask "font-martian-mono"
 cask "font-martian-mono-nerd-font"

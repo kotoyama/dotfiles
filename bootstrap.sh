@@ -27,6 +27,7 @@ link() {
     "git/gitignore:$HOME/.gitignore"
     "git/gitattributes:$HOME/.gitattributes"
     "ssh/config:$HOME/.ssh/config"
+    "starship/starship.toml:$HOME/.config/starship.toml"
     "zsh/zshrc:$HOME/.zshrc"
     "zsh/zprofile:$HOME/.zprofile"
     "bootstrap.sh:$HOME/.local/bin/dotfiles"

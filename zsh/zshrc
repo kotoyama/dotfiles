@@ -4,6 +4,11 @@ export HOMEBREW_NO_ANALYTICS=1
 
 ZSH_THEME="robbyrussell"
 
+if (( $+commands[starship] )); then
+  unset ZSH_THEME
+  eval "$(starship init zsh)"
+fi
+
 plugins=(git)
 while read -r repo; do
   [[ -n "$repo" ]] && plugins+=("${repo:t}")
