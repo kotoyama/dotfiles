@@ -56,7 +56,9 @@
     },
     "external_directory": {
       "*": "deny",
-      "~/.agents/skills/**": "allow"
+      "~/.agents/skills/**": "allow",
+      "~/.local/share/opencode/**": "allow",
+      "/var/folders/**/opencode/**": "allow"
     }
   },
   "autoupdate": true,
