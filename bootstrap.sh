@@ -13,6 +13,14 @@ backup_if_needed() {
   fi
 }
 
+make_link() {
+  local target="$1"
+  local source="$2"
+  backup_if_needed "$target"
+  ln -sfn "$source" "$target"
+  echo "  ✓ $target -> $source"
+}
+
 link() {
   echo "🔧 Setting up symlinks..."
   local links=(
@@ -49,10 +57,7 @@ link() {
       local base="${dst%/}"
       for f in $glob; do
         [ -e "$f" ] || continue
-        local target="$base/$(basename "$f")"
-        backup_if_needed "$target"
-        ln -sfn "$f" "$target"
-        echo "  ✓ $target -> $f"
+        make_link "$base/$(basename "$f")" "$f"
       done
       continue
     fi
@@ -61,9 +66,7 @@ link() {
       exit 1
     fi
     mkdir -p "$(dirname "$dst")"
-    backup_if_needed "$dst"
-    ln -sfn "$DOTFILES_DIR/$src" "$dst"
-    echo "  ✓ $dst -> $DOTFILES_DIR/$src"
+    make_link "$dst" "$DOTFILES_DIR/$src"
   done
   echo "✅ Symlinks ready."
 }
